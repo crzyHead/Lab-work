@@ -1,0 +1,6 @@
+c:\users\admin\source\repos\lab1-task6\lab1-task6\bin\Debug\lab1-task6.exe.config
+c:\users\admin\source\repos\lab1-task6\lab1-task6\bin\Debug\lab1-task6.exe
+c:\users\admin\source\repos\lab1-task6\lab1-task6\bin\Debug\lab1-task6.pdb
+c:\users\admin\source\repos\lab1-task6\lab1-task6\obj\Debug\lab1-task6.csproj.CoreCompileInputs.cache
+c:\users\admin\source\repos\lab1-task6\lab1-task6\obj\Debug\lab1-task6.exe
+c:\users\admin\source\repos\lab1-task6\lab1-task6\obj\Debug\lab1-task6.pdb
