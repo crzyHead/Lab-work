@@ -1,5 +1,5 @@
 ﻿/*
-        Не реализовал наследование, поскольку не нашел метод передачи массива чисел, необходимого для определения 
+        Не реализовал наследование, поскольку не сущетвует методов передачи массива чисел наследнику, необходимого для определения 
     является ли равносторонним треугольник, а так же потому что основную функцию наследующего класса уже выполнял родительский класс.
         В этой версии программы реализован выбор между автозаполнением и ручным вводом. Создана проверка на равносторонность(+равнобокость), но не путём наследования.
         Реализованный вариант: №6. Задание варианта: По трём точкам найти стороны, периметр, площадь и определить минимальную медиану 
@@ -17,19 +17,24 @@ namespace figure
         {
             int n = 3;
             int k = 1;
-            int choVar;
+            int choInt;
             bool boolVar = false;
+            bool choBool = false;
             String x = "";
             String y = "";
             Triangle[] tr = new Triangle[n];
             do
             {
                 Console.Clear();
-                Console.WriteLine("0 - автозаполнение, 1 - ручной ввод");
-                choVar = int.Parse(Console.ReadLine());
-                Console.Clear();
-                Console.WriteLine("Режим: " + (choVar == 1 ? "ручной ввод" : "автозаполнение"));
-                if (choVar == 1)
+                do{    
+                        Console.WriteLine("0 - автозаполнение, 1 - ручной ввод");
+                        try{
+                                choBool = choInt == int.Parse(Console.ReadLine()) ? true : false;
+                                Console.Clear();}                        
+                        catch (Exception e){}
+                }while(choBool != true);
+                Console.WriteLine("Режим: " + (choInt == 1 ? "ручной ввод" : "автозаполнение"));
+                if (choInt == 1)
                 {
                     for (int i = 0; i < n; i++)
                     {
@@ -53,7 +58,7 @@ namespace figure
                 }
                 else
                 {
-                    if (choVar == 0)
+                    if (choInt == 0)
                     {
                         boolVar = true;
                         int i = 0;
