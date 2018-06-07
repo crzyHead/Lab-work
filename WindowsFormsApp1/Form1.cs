@@ -83,11 +83,17 @@ namespace RGR
             MFirstEnter = true;
             SFirstEnter = true;
         }
-        private void btnResultIF_Click(object sender, EventArgs e)
+         private void btnResultIF_Click(object sender, EventArgs e)
         {
             try
             {
-                double X = double.Parse(txtBoxX.Text);
+                double X = 0;
+                if (!int.TryParse(txtBoxX.Text, out int result))
+                    MessageBox.Show("Введите числовое значение!", "Ошбка!", MessageBoxButtons.OK);
+                else
+                {
+                    X = double.Parse(txtBoxX.Text);
+                }
                 if (X <= -1)
                 {   
                     txtBoxResultIF.Text = (2*Math.Pow(X, 3) + 3*X).ToString();
@@ -106,6 +112,11 @@ namespace RGR
                 }
                 IffirstEnter = true;
             }
+            catch(Exception o)
+            {
+
+            }
+        }
             catch(Exception o)
             {
 
